@@ -18,23 +18,9 @@ def main(input_file):
    """Minimal ChromaDB test agent."""
    try:
        # Read the input file
-       with open(input_file, 'rb') as f:
-            raw_data = f.read()
-            
-            # Try to detect proper encoding
-            encoding = 'utf-16'  # Default attempt
-            try:
-                decoded_data = raw_data.decode(encoding)
-            except UnicodeDecodeError:
-                # Try alternative encoding
-                encoding = 'latin1'  # This encoding can handle any byte sequence
-                decoded_data = raw_data.decode(encoding)
-            
-            # Parse JSON from string
-            input_data = json.loads(decoded_data)
-            
-    
-                
+       with open(input_file, 'r') as f:
+           input_data = json.load(f)
+      
        # Get OpenAI API key
        openai_api_key = input_data.get('openai_api_key')
        if not openai_api_key:
