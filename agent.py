@@ -18,7 +18,7 @@ def main(input_file):
    """Minimal ChromaDB test agent."""
    try:
        # Read the input file
-       with open(input_file, 'r') as f:
+       with open(input_file, 'rb') as f:
            input_data = json.load(f)
       
        # Get OpenAI API key
