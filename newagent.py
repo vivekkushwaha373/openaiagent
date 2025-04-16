@@ -63,7 +63,7 @@ def main(input_file):
    """
    try:
        # Read the input file
-       with open(input_file, 'r') as f:
+       with open(input_file,'r',encoding="ISO-8859-1") as f:
            input_data = json.load(f)
       
        # Get OpenAI API key
