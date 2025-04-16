@@ -32,7 +32,8 @@ def main(input_file):
             
             # Parse JSON from string
             input_data = json.loads(decoded_data)
-            
+           
+                    
       
        # Get OpenAI API key
        openai_api_key = input_data.get('openai_api_key')
